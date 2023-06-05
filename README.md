@@ -7,5 +7,5 @@ NB. Virknignstidspunketet settes til den 01. i den valgte måneden uansett hvilk
 
 ### Docker: 
 ```bash
- docker build -t pottberegner .  && docker run -p 3838:3838
+ docker build -t pottberegner .  && docker run -p 3838:3838 pottberegner
 ```
