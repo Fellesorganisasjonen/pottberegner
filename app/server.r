@@ -24,12 +24,12 @@ server <- function(input, output) {
   inputResults <- reactive({
     data.frame(
       Betegnelse = c(
-        "Virkningstidspunkt",
+        "Antall måneder med virkning",
         paste("Gjennstående % omregnet (", scales::percent(rest(), accuracy = 0.1)," / ",months()," x 12)"),
         "Gjennomsnittlig pott per årsverk"
       ),
       Verdier = as.character(c(
-        as.numeric(input$date),
+        as.numeric(months()),
         scales::percent(gjennstaende(), accuracy = 0.1),
         round(input$Årslønn * gjennstaende())
       )))
@@ -40,14 +40,4 @@ server <- function(input, output) {
   
   output$results <- renderTable({ inputResults() })
 
-    output$distPlot <- renderPlot({
-        # generate bins based on input$bins from ui.R
-        x    <- faithful[, 2]
-        bins <- seq(min(x), max(x), length.out = input$bins + 1)
-
-        # draw the histogram with the specified number of bins
-        hist(x, breaks = bins, col = 'darkgray', border = 'white',
-             xlab = 'Waiting time to next eruption (in mins)',
-             main = 'Histogram of waiting times')
-    })
 }
