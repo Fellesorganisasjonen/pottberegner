@@ -4,9 +4,9 @@ library(shinydashboard)
 dashboardPage(
   skin ="red",
     dashboardHeader(title = "Pottberegner - Kapittel 3.4 og 5",
-    titleWidth = 300),
+    titleWidth = 350),
     dashboardSidebar(
-      width = 300,
+      width = 350,
       numericInput("Årslønn", label = h4("Gjennomsnittlig årslønn"), value = 787668), # nolint 
       sliderInput("Ramme",label=h4("Ramme"), min = 0, max = 10, post  = " %", value = 5.4, step = 0.1), # nolint
       dateInput("date", label = h4("Virkningstidspunkt*"), value = "2023-05-01", language = "no", format = "dd/mm/yyyy" ), # nolint
