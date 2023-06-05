@@ -5,4 +5,7 @@ Dette er en enkel webbapp laget i Shiny for R. Appen er ment som et hjelpeverkt�
 
 NB. Virknignstidspunketet settes til den 01. i den valgte måneden uansett hvilken dato som velges
 
-Appen kan kjøres lokalt med Shiny eller med å bruke Dockerfilen.
+### Docker: 
+```bash
+ docker build -t pottberegner .  && docker run -p 3838:3838
+```
