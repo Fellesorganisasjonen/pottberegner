@@ -18,7 +18,7 @@ RUN apt-get update && \
     apt-get upgrade -y && \
     apt-get clean
 ## Install R libraries
-RUN R -e "install.packages(c('shiny', 'lubridate', 'scales'))"
+RUN R -e "install.packages(c('shiny', 'shinydashboard', 'lubridate', 'scales'))"
 
 # Copy the app files to the container
 COPY /app ./app
