@@ -8,7 +8,7 @@ NB. Virknignstidspunketet settes til den 01. i den valgte måneden uansett hvilk
 ### Docker: 
 Appen har blitt konfigurert for Docker. Kjør følgende
 ```bash
- docker build -t pottberegner
+ docker build -t pottberegner .
 ```
 for å lage et image av dockerfilen. 
 
