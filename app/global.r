@@ -1,6 +1,8 @@
 library(shiny)
 library(lubridate)
 library(scales)
+library(dplyr)
+library(ggplot2)
 options(scipen = 999)
 
   # Funksjon for å beregne måneder igjen i året
